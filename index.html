@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+	<link rel="icon" type="image/png" href="tmp.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🌡 Temperature Converter 🌡</h1>
+
+    <div class="converter">
+
+        <div class="box">
+            <label>From</label>
+            <select id="from">
+                <option value="C">°C</option>
+                <option value="F">°F</option>
+                <option value="R">°R</option>
+				<option value="K">K</option>
+            </select>
+
+            <input id="inputTemp" type="number" placeholder="Enter value">
+        </div>
+
+
+        <div class="arrow">
+            ⇄
+        </div>
+
+
+        <div class="box">
+            <label>To</label>
+            <select id="to">
+                <option value="C">°C</option>
+                <option value="F">°F</option>
+				<option value="R">°R</option>
+                <option value="K">K</option>
+            </select>
+
+            <input id="result" type="text" readonly placeholder="Result">
+        </div>
+
+    </div>
+
+    <button onclick="convert()">Convert</button>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
