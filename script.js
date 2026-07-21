@@ -75,6 +75,20 @@ function updateToOptions() {
 }
 
 
+function swapUnits() {
+    const fromSelect = document.getElementById('from');
+    const toSelect = document.getElementById('to');
+    
+    // Swap the selected values
+    const temp = fromSelect.value;
+    fromSelect.value = toSelect.value;
+    toSelect.value = temp;
+    
+    // Update the "To" options after swap
+    updateToOptions();
+}
+
+
 function convert() {
 
     let value = Number(document.getElementById("inputTemp").value);
