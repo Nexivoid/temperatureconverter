@@ -318,7 +318,6 @@ button:active {
 
 }
 
-/* New styles for the swap button tooltip and pointer behavior */
 .arrow {
     position: relative;
     display: inline-flex;
@@ -334,13 +333,12 @@ button:active {
 }
 
 .arrow:hover {
-    cursor: pointer; /* makes cursor point on hover */
+    cursor: pointer;
     transform: translateY(-4px);
     background: rgba(255,255,255,0.09);
     box-shadow: 0 12px 30px rgba(0,0,0,0.45), inset 0 0 20px rgba(255,255,255,0.04);
 }
 
-/* Tooltip */
 .tooltip {
     position: absolute;
     left: 50%;
@@ -366,7 +364,6 @@ button:active {
     transform: translateX(-50%) translateY(0);
 }
 
-/* Make tooltip accessible when focusing via keyboard */
 .arrow:focus .tooltip,
 .arrow:focus-visible .tooltip {
     opacity: 1;
