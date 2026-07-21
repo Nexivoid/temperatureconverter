@@ -317,3 +317,58 @@ button:active {
     transform:scale(.95);
 
 }
+
+/* New styles for the swap button tooltip and pointer behavior */
+.arrow {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35), inset 0 0 15px rgba(255,255,255,0.03);
+    transition: transform .18s ease, background .18s ease;
+}
+
+.arrow:hover {
+    cursor: pointer; /* makes cursor point on hover */
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.09);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45), inset 0 0 20px rgba(255,255,255,0.04);
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%) translateY(8px);
+    background: rgba(255,255,255,0.12);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    white-space: nowrap;
+}
+
+.arrow:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Make tooltip accessible when focusing via keyboard */
+.arrow:focus .tooltip,
+.arrow:focus-visible .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
