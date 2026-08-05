@@ -5,10 +5,7 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-}
 
-html,
-body {
     cursor: url("nc.png") 16 16, auto;
 }
 
@@ -28,6 +25,7 @@ body {
 }
 
 .container {
+
     background: rgba(255,255,255,0.12);
 
     backdrop-filter: blur(18px);
@@ -95,7 +93,6 @@ h1 {
     flex-direction: column;
 
     gap: 12px;
-
 }
 
 label {
@@ -104,6 +101,7 @@ label {
 
     font-weight: bold;
 
+    cursor: url("nc.png") 16 16, auto;
 }
 
 select {
@@ -166,7 +164,9 @@ select:hover {
     border-color: #60a5fa;
 
     box-shadow:
+
         0 10px 30px rgba(96,165,250,.5),
+
         inset 0 0 20px rgba(255,255,255,.2);
 }
 
@@ -177,6 +177,7 @@ select:focus {
     border-color: #22c55e;
 
     box-shadow:
+
         0 0 25px #22c55e;
 }
 
@@ -227,6 +228,7 @@ input:focus {
     border-color: #22c55e;
 
     box-shadow:
+
         0 0 20px #22c55e;
 }
 
@@ -248,6 +250,7 @@ button {
     border-radius: 25px;
 
     background:
+
         linear-gradient(135deg,#22c55e,#16a34a);
 
     color: white;
@@ -259,6 +262,7 @@ button {
     cursor: url("pc.png") 16 16, pointer;
 
     box-shadow:
+
         0 10px 30px rgba(34,197,94,.4);
 
     transition: .3s;
@@ -269,6 +273,7 @@ button:hover {
     transform: scale(1.1);
 
     box-shadow:
+
         0 15px 40px rgba(34,197,94,.7);
 }
 
@@ -278,12 +283,6 @@ button:active {
 }
 
 a {
-    cursor: url("pc.png") 16 16, pointer;
-}
 
-a:hover,
-button:hover,
-select:hover,
-.arrow:hover {
     cursor: url("pc.png") 16 16, pointer;
 }
