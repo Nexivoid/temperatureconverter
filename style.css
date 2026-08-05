@@ -169,7 +169,7 @@ a:hover,
 button:hover,
 select:hover,
 .arrow:hover {
-    cursor: url('hc.png') 16 16, pointer;
+    cursor: url('pc.png') 16 16, pointer;
 }
 
 select:hover {
@@ -272,7 +272,7 @@ input:focus {
 }
 
 .arrow:hover {
-    cursor: url('hc.png') 16 16, pointer;
+    cursor: url('pc.png') 16 16, pointer;
 }
 
 button {
@@ -326,7 +326,7 @@ button:hover {
         0 15px 40px rgba(34,197,94,.7);
 
 
-    cursor: url('hc.png') 16 16, pointer;
+    cursor: url('pc.png') 16 16, pointer;
 }
 
 button:active {
