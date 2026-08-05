@@ -286,3 +286,42 @@ a {
 
     cursor: url("pc.png") 16 16, pointer;
 }
+
+#contextMenu {
+    position: fixed;
+
+    display: none;
+
+    background: black;
+
+    color: white;
+
+    font-weight: bold;
+
+    border-radius: 15px;
+
+    padding: 8px;
+
+    width: 140px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.5);
+
+    z-index: 9999;
+}
+
+#contextMenu div {
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    cursor: url("pc.png") 16 16, pointer;
+
+    transition: .2s;
+}
+
+#contextMenu div:hover {
+
+    background: rgba(255,255,255,0.15);
+}
