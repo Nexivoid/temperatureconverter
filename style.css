@@ -21,7 +21,7 @@ body {
 
     overflow:hidden;
 
-    cursor: url('normal.png') 16 16, auto;
+    cursor: url('nc.png') 16 16, auto;
 }
 
 .container {
@@ -169,7 +169,7 @@ a:hover,
 button:hover,
 select:hover,
 .arrow:hover {
-    cursor: url('hover.png') 16 16, pointer;
+    cursor: url('hc.png') 16 16, pointer;
 }
 
 select:hover {
@@ -245,7 +245,7 @@ input {
     box-shadow:
         0 8px 20px rgba(0,0,0,.25);
 
-    cursor: url('text.png') 2 2, text;
+    cursor: url('tc.png') 2 2, text;
 
 }
 
@@ -272,7 +272,7 @@ input:focus {
 }
 
 .arrow:hover {
-    cursor: url('hover.png') 16 16, pointer;
+    cursor: url('hc.png') 16 16, pointer;
 }
 
 button {
@@ -326,7 +326,7 @@ button:hover {
         0 15px 40px rgba(34,197,94,.7);
 
 
-    cursor: url('hover.png') 16 16, pointer;
+    cursor: url('hc.png') 16 16, pointer;
 }
 
 button:active {
