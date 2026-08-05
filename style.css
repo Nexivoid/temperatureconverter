@@ -7,6 +7,7 @@
     -ms-user-select: none;
 }
 
+/* Use a custom pointer cursor site-wide; fallback to auto if it fails */
 body {
     margin: 0;
     height: 100vh;
@@ -20,6 +21,9 @@ body {
     linear-gradient(135deg, #111827, #1e40af);
 
     overflow:hidden;
+
+    /* custom default cursor (pcursor.png) */
+    cursor: url('pcursor.png') 16 16, auto;
 }
 
 .container {
@@ -131,6 +135,7 @@ select {
     font-weight:bold;
 
 
+    /* keep pointer for selects by default */
     cursor:pointer;
 
 
@@ -161,6 +166,14 @@ select {
 
 
     transition:.3s;
+}
+
+/* use hover cursor image for interactive controls */
+a:hover,
+button:hover,
+select:hover,
+.arrow:hover {
+    cursor: url('hcursor.png') 16 16, pointer;
 }
 
 select:hover {
@@ -236,6 +249,9 @@ input {
     box-shadow:
         0 8px 20px rgba(0,0,0,.25);
 
+    /* use text cursor image for inputs */
+    cursor: url('tcursor.png') 2 2, text;
+
 }
 
 input:hover {
@@ -258,6 +274,11 @@ input:focus {
 
     font-size:50px;
 
+}
+
+/* ensure the arrow shows the hover cursor when hovered */
+.arrow:hover {
+    cursor: url('hcursor.png') 16 16, pointer;
 }
 
 button {
@@ -310,6 +331,9 @@ button:hover {
 
         0 15px 40px rgba(34,197,94,.7);
 
+
+    /* show custom hover cursor on buttons */
+    cursor: url('hcursor.png') 16 16, pointer;
 }
 
 button:active {
@@ -317,4 +341,5 @@ button:active {
     transform:scale(.95);
 
 }
+
 
