@@ -134,3 +134,59 @@ updateToOptions();
 document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
 });
+
+const contextMenu = document.getElementById("contextMenu");
+
+document.addEventListener("contextmenu", function(e) {
+
+    e.preventDefault();
+
+    contextMenu.style.display = "block";
+
+    contextMenu.style.left = e.pageX + "px";
+    contextMenu.style.top = e.pageY + "px";
+
+});
+
+
+document.addEventListener("click", function() {
+
+    contextMenu.style.display = "none";
+
+});
+
+
+function copyText() {
+
+    let selected = window.getSelection().toString();
+
+    if (selected.length > 0) {
+        navigator.clipboard.writeText(selected);
+    }
+
+}
+
+
+async function pasteText() {
+
+    let text = await navigator.clipboard.readText();
+
+    let active = document.activeElement;
+
+    if (
+        active &&
+        (active.tagName === "INPUT" ||
+        active.tagName === "TEXTAREA")
+    ) {
+
+        let start = active.selectionStart;
+        let end = active.selectionEnd;
+
+        active.value =
+            active.value.substring(0,start) +
+            text +
+            active.value.substring(end);
+
+    }
+
+}
