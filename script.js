@@ -166,7 +166,6 @@ function copyText() {
 
 }
 
-
 async function pasteText() {
 
     let text = await navigator.clipboard.readText();
