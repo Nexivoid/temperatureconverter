@@ -289,41 +289,51 @@ a {
 
 #contextMenu {
     position: fixed;
-
     display: none;
 
-    background: black;
-
+    background: rgba(15, 15, 15, 0.96);
     color: white;
 
-    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
 
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
 
     padding: 5px;
-
-    width: 90px;
+    width: 110px;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.5);
+        0 8px 25px rgba(0, 0, 0, 0.45),
+        0 2px 6px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(10px);
 
     z-index: 9999;
 }
 
 #contextMenu div {
-
-    padding: 7px 12px;
+    padding: 8px 12px;
 
     border-radius: 8px;
 
     cursor: url("pc.png") 16 16, pointer;
 
-    transition: .2s;
+    transition:
+        background 0.15s ease,
+        transform 0.1s ease;
 
     text-align: center;
+
+    user-select: none;
 }
 
 #contextMenu div:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
 
-    background: rgba(255,255,255,0.15);
+#contextMenu div:active {
+    background: rgba(255, 255, 255, 0.20);
+    transform: scale(0.97);
 }
